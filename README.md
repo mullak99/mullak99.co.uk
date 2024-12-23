@@ -14,7 +14,7 @@ Website for mullak99.co.uk. Made using [SvelteKit](https://kit.svelte.dev/) & [T
 2. Open a terminal in the repository root and enter `nvm install`, `nvm use`, and `corepack enable`.
 3. Run `yarn install`.
 
-### Running
+## Running
 
 Once the development environment is set up, you can run the project with:
 
@@ -31,3 +31,7 @@ yarn build
 ```
 
 You can preview the production build with `yarn preview`.
+
+## Testing
+
+TODO: Add Playwright testing instructions

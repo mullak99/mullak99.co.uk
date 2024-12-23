@@ -1,11 +1,8 @@
 <script>
 	import '../app.css';
-	import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+	import { faCode } from '@fortawesome/free-solid-svg-icons';
 	import { FontAwesomeIcon as Fa } from '@fortawesome/svelte-fontawesome';
-	import { page } from '$app/stores';
-
-	// Reactive statement to get the current pathname
-	let currentPath = $page.url.pathname;
+	import NavLink from '../lib/NavLink.svelte';
 
 	let isDarkMode = false;
 
@@ -46,21 +43,14 @@
 				<div class="w-full px-12">
 					<!-- Navigation Links -->
 					<div class="flex space-x-8 justify-start">
-						<a
-							href="/"
-							class="text-neutral-800 dark:text-neutral-200 hover:text-neutral-600 dark:hover:text-neutral-400
-				{currentPath === '/' ? 'text-green-600 dark:text-green-400' : ''}">Home</a
-						>
-						<a
-							href="/about"
-							class="text-neutral-800 dark:text-neutral-200 hover:text-neutral-600 dark:hover:text-neutral-400
-				{currentPath === '/about' ? 'text-green-600 dark:text-green-400' : ''}">About</a
-						>
+						<NavLink path="/" title="Home" />
+						<NavLink path="/about" title="About" />
+						<NavLink path="/contact" title="Contact" />
 					</div>
 				</div>
 
-				<!-- Dark Mode Toggle Button -->
-				<button
+				<!-- Dark Mode Toggle Button (Disabled) -->
+				<!-- <button
 					class="p-2 bg-neutral-200 dark:bg-neutral-700 rounded-full shadow-md hover:bg-neutral-300 dark:hover:bg-neutral-600"
 					on:click={toggleDarkMode}
 				>
@@ -69,7 +59,7 @@
 					{:else}
 						<Fa icon={faMoon} class="h-5 w-5 text-neutral-600" />
 					{/if}
-				</button>
+				</button> -->
 			</div>
 		</div>
 	</nav>
@@ -81,8 +71,13 @@
 	<footer class="bg-neutral-800 dark:bg-neutral-900 text-neutral-300 mt-auto">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 			<div class="flex justify-between items-center">
-				<p class="text-sm">&copy; 2024 mullak99. All rights reserved.</p>
+				<p class="text-sm">&copy; {new Date().getFullYear()} mullak99. All rights reserved.</p>
 				<div class="flex space-x-6"></div>
+				<!-- Source Code Link (Disabled as the repo is still private) -->
+				<!--
+				<a href="https://github.com/mullak99/mullak99.co.uk" target="_blank" rel="noopener noreferrer" title="Source Code" aria-label="Source Code">
+					<Fa icon={faCode} class="h-5 w-5 text-neutral-300 hover:text-white dark:hover:text-neutral-100" />
+				</a> -->
 			</div>
 		</div>
 	</footer>
