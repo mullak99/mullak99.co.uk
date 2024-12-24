@@ -33,6 +33,8 @@
 				{#if downloadHref}
 					<a
 						href={downloadHref}
+						target="_blank"
+						rel="noopener noreferrer"
 						class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200"
 						title="Download"
 						aria-label="Download"
@@ -43,6 +45,8 @@
 				{#if sourceHref}
 					<a
 						href={sourceHref}
+						target="_blank"
+						rel="noopener noreferrer"
 						class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200"
 						title="Source"
 						aria-label="Source"
