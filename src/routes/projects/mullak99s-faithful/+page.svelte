@@ -9,12 +9,11 @@
 		<h2
 			class="text-3xl font-extrabold text-neutral-900 dark:text-neutral-100 sm:text-4xl lg:text-5xl"
 		>
-			About
+			mullak99's Faithful
 		</h2>
 		<p class="mt-6 text-lg text-neutral-600 dark:text-neutral-300 sm:text-xl lg:text-2xl">
-			<Fa icon={faTriangleExclamation} class="text-yellow-400 dark:text-yellow-300 mr-2" />
 			This page is a work in progress.
-			<Fa icon={faTriangleExclamation} class="text-yellow-400 dark:text-yellow-300 ml-2" />
 		</p>
+		<Fa icon={faTriangleExclamation} class="mt-8 h-12 w-12 text-yellow-400 dark:text-yellow-300" />
 	</div>
 </section>

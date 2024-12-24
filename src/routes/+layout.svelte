@@ -1,8 +1,8 @@
 <script>
 	import '../app.css';
-	import { faCode } from '@fortawesome/free-solid-svg-icons';
+	import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 	import { FontAwesomeIcon as Fa } from '@fortawesome/svelte-fontawesome';
-	import NavLink from '../lib/NavLink.svelte';
+	import NavBar from '$lib/NavBar.svelte';
 
 	let isDarkMode = false;
 
@@ -29,47 +29,18 @@
 	}
 </script>
 
-<main class="bg-neutral-50 dark:bg-neutral-900 text-neutral-800 dark:text-neutral-200 min-h-screen">
+<main class="bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100">
 	<!-- Navbar -->
-	<nav class="bg-neutral-100 dark:bg-neutral-800 shadow-lg">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="flex items-center justify-between h-16">
-				<!-- Logo -->
-				<div class="flex-shrink-0">
-					<a href="/">
-						<img class="h-12 w-12" src="logo.png" alt="mullak99" />
-					</a>
-				</div>
-				<div class="w-full px-12">
-					<!-- Navigation Links -->
-					<div class="flex space-x-8 justify-start">
-						<NavLink path="/" title="Home" />
-						<NavLink path="/about" title="About" />
-						<NavLink path="/contact" title="Contact" />
-					</div>
-				</div>
-
-				<!-- Dark Mode Toggle Button (Disabled) -->
-				<!-- <button
-					class="p-2 bg-neutral-200 dark:bg-neutral-700 rounded-full shadow-md hover:bg-neutral-300 dark:hover:bg-neutral-600"
-					on:click={toggleDarkMode}
-				>
-					{#if isDarkMode}
-						<Fa icon={faSun} class="h-5 w-5 text-neutral-300" />
-					{:else}
-						<Fa icon={faMoon} class="h-5 w-5 text-neutral-600" />
-					{/if}
-				</button> -->
-			</div>
-		</div>
-	</nav>
+	<NavBar />
 
 	<!-- Content -->
 	<slot />
 
 	<!-- Footer -->
-	<footer class="bg-neutral-800 dark:bg-neutral-900 text-neutral-300 mt-auto">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+	<footer
+		class="bg-neutral-50 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 mt-auto shadow-md"
+	>
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-8">
 			<div class="flex justify-between items-center">
 				<p class="text-sm">&copy; {new Date().getFullYear()} mullak99. All rights reserved.</p>
 				<div class="flex space-x-6"></div>
