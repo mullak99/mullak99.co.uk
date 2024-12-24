@@ -1,32 +1,8 @@
 <script>
 	import '../app.css';
-	import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+	import { faCode } from '@fortawesome/free-solid-svg-icons';
 	import { FontAwesomeIcon as Fa } from '@fortawesome/svelte-fontawesome';
 	import NavBar from '$lib/NavBar.svelte';
-
-	let isDarkMode = false;
-
-	// Check if dark mode is enabled
-	const isDarkModeEnabled = () => {
-		if (typeof document !== 'undefined') {
-			return document.documentElement.classList.contains('dark');
-		}
-		return false;
-	};
-
-	$: {
-		isDarkMode = isDarkModeEnabled();
-	}
-
-	// Toggle dark mode
-	function toggleDarkMode() {
-		isDarkMode = !isDarkMode;
-		if (isDarkMode) {
-			document.documentElement.classList.add('dark');
-		} else {
-			document.documentElement.classList.remove('dark');
-		}
-	}
 </script>
 
 <main class="bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100">
@@ -44,11 +20,19 @@
 			<div class="flex justify-between items-center">
 				<p class="text-sm">&copy; {new Date().getFullYear()} mullak99. All rights reserved.</p>
 				<div class="flex space-x-6"></div>
-				<!-- Source Code Link (Disabled as the repo is still private) -->
-				<!--
-				<a href="https://github.com/mullak99/mullak99.co.uk" target="_blank" rel="noopener noreferrer" title="Source Code" aria-label="Source Code">
-					<Fa icon={faCode} class="h-5 w-5 text-neutral-300 hover:text-white dark:hover:text-neutral-100" />
-				</a> -->
+				<!-- Source Code Link -->
+				<a
+					href="https://github.com/mullak99/mullak99.co.uk"
+					target="_blank"
+					rel="noopener noreferrer"
+					title="Source Code"
+					aria-label="Source Code"
+				>
+					<Fa
+						icon={faCode}
+						class="h-5 w-5 text-neutral-300 hover:text-white dark:hover:text-neutral-100"
+					/>
+				</a>
 			</div>
 		</div>
 	</footer>
