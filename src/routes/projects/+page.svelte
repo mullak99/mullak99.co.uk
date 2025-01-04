@@ -4,7 +4,7 @@
 
 <section class="relative flex pt-8 justify-center bg-cover bg-center min-h-screen">
 	<div class="absolute inset-0"></div>
-	<div class="relative z-10 text-center w-7/12 px-4 sm:px-6 lg:px-8">
+	<div class="relative z-10 text-center w-full sm:w-7/12 px-4 sm:px-6 lg:px-8">
 		<h2
 			class="text-3xl font-extrabold text-neutral-900 dark:text-neutral-100 sm:text-4xl lg:text-5xl"
 		>
