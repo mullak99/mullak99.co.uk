@@ -72,7 +72,7 @@
 	</div>
 	<!-- Mobile Menu -->
 	{#if isMenuOpen}
-		<div class="xl:hidden">
+		<div class="md:hidden lg:hidden">
 			<div class="flex flex-col items-end px-2 pt-2 pb-3 space-y-4 sm:px-3">
 				<NavLinks />
 				<!-- svelte-ignore a11y_invalid_attribute -->
@@ -84,8 +84,10 @@
 					on:click={toggleDarkMode}
 				>
 					{#if isDarkMode}
+						<Fa icon={faSun} class="h-4 w-4 pr-1 text-neutral-700 dark:text-neutral-300" />
 						Light Mode
 					{:else}
+						<Fa icon={faMoon} class="h-4 w-4 pr-1 text-neutral-700 dark:text-neutral-300" />
 						Dark Mode
 					{/if}
 				</a>
