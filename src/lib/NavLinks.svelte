@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import NavLink from '$lib/NavLink.svelte';
 	import {
 		faHouse,

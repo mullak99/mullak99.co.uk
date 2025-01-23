@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
 	import { FontAwesomeIcon as Fa } from '@fortawesome/svelte-fontawesome';
 </script>

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { faSun, faMoon, faBars } from '@fortawesome/free-solid-svg-icons';
 	import { FontAwesomeIcon as Fa } from '@fortawesome/svelte-fontawesome';
 	import NavLinks from '$lib/NavLinks.svelte';
