@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import ProjectTile from '$lib/ProjectTile.svelte';
 </script>
 

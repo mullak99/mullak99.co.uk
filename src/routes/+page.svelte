@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 </script>
 
 <section class="relative flex items-center justify-center min-h-screen bg-cover bg-center">
