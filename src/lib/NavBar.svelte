@@ -45,9 +45,15 @@
 					on:click={() => (isMenuOpen = !isMenuOpen)}
 				>
 					{#if isMenuOpen}
-						<Fa icon={faBars} class="h-5 w-5 text-neutral-700 dark:text-neutral-300" />
+						<Fa
+							icon={faBars}
+							class="h-5 w-5 pt-[2px] px-[1px] text-neutral-700 dark:text-neutral-300 -m-[1px]"
+						/>
 					{:else}
-						<Fa icon={faBars} class="h-5 w-5 text-neutral-700 dark:text-neutral-300" />
+						<Fa
+							icon={faBars}
+							class="h-5 w-5 pt-[2px] px-[1px] text-neutral-700 dark:text-neutral-300 -m-[1px]"
+						/>
 					{/if}
 				</button>
 			</div>
@@ -59,13 +65,19 @@
 			</div>
 			<!-- Dark Mode Toggle -->
 			<button
-				class="hidden md:block px-2.5 py-2 bg-neutral-200 dark:bg-neutral-700 rounded-full shadow-md hover:bg-neutral-300 dark:hover:bg-neutral-600"
+				class="hidden md:block px-2.5 py-2 bg-neutral-200 dark:bg-neutral-700 rounded-full shadow-md hover:bg-neutral-300 dark:hover:bg-neutral-600 flex items-center justify-center"
 				on:click={toggleDarkMode}
 			>
 				{#if isDarkMode}
-					<Fa icon={faSun} class="h-5 w-5 text-neutral-700 dark:text-neutral-300" />
+					<Fa
+						icon={faSun}
+						class="h-5 w-5 pt-[2px] px-[1px] text-neutral-700 dark:text-neutral-300 -m-[1px]"
+					/>
 				{:else}
-					<Fa icon={faMoon} class="h-5 w-5 text-neutral-700 dark:text-neutral-300" />
+					<Fa
+						icon={faMoon}
+						class="h-5 w-5 pt-[2px] px-[1px] text-neutral-700 dark:text-neutral-300 -m-[1px]"
+					/>
 				{/if}
 			</button>
 		</div>
