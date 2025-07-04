@@ -2,6 +2,14 @@
 	import ProjectTile from '$lib/ProjectTile.svelte';
 </script>
 
+<svelte:head>
+	<title>mullak99.co.uk | Projects</title>
+	<meta name="description" content="Projects" />
+	<meta property="og:title" content="mullak99.co.uk | Projects" />
+	<meta property="og:description" content="Projects" />
+	<meta property="og:image" content="https://mullak99.co.uk/logo.png" />
+</svelte:head>
+
 <section class="relative flex py-8 justify-center bg-cover bg-center min-h-[calc(100vh-4rem-5rem)]">
 	<div class="absolute inset-0"></div>
 	<div class="relative z-10 text-center w-full sm:w-7/12 px-4 sm:px-6 lg:px-8">

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /projects/*
+Sitemap: https://mullak99.co.uk/sitemap.xml

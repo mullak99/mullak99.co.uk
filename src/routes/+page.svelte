@@ -1,6 +1,14 @@
 <script lang="ts">
 </script>
 
+<svelte:head>
+	<title>mullak99.co.uk | Home</title>
+	<meta name="description" content="Introduction" />
+	<meta property="og:title" content="mullak99.co.uk | Home" />
+	<meta property="og:description" content="Introduction" />
+	<meta property="og:image" content="https://mullak99.co.uk/logo.png" />
+</svelte:head>
+
 <section
 	class="relative flex items-center justify-center pb-4 bg-cover bg-center min-h-[calc(100vh-4rem-5rem)]"
 >

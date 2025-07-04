@@ -2,8 +2,13 @@
 	import '../app.css';
 	import { faCode } from '@fortawesome/free-solid-svg-icons';
 	import { FontAwesomeIcon as Fa } from '@fortawesome/svelte-fontawesome';
+	import { page } from '$app/state';
 	import NavBar from '$lib/NavBar.svelte';
 </script>
+
+<svelte:head>
+	<link rel="canonical" href={page.url.href} />
+</svelte:head>
 
 <main class="bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100">
 	<!-- Navbar -->
@@ -15,9 +20,7 @@
 	<footer
 		class="bg-neutral-100 dark:bg-neutral-800 shadow-md border-t border-neutral-300 dark:border-neutral-700 h-20 -mt-[1px]"
 	>
-		<div
-			class="flex items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full"
-		>
+		<div class="flex items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
 			<div class="container mx-auto flex items-center justify-between h-full">
 				<div class="text-left flex items-center">
 					<p>&copy; {new Date().getFullYear()} mullak99. All rights reserved.</p>

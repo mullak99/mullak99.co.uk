@@ -3,6 +3,14 @@
 	import { FontAwesomeIcon as Fa } from '@fortawesome/svelte-fontawesome';
 </script>
 
+<svelte:head>
+	<title>mullak99.co.uk | About</title>
+	<meta name="description" content="About" />
+	<meta property="og:title" content="mullak99.co.uk | About" />
+	<meta property="og:description" content="About" />
+	<meta property="og:image" content="https://mullak99.co.uk/logo.png" />
+</svelte:head>
+
 <section
 	class="relative flex items-center justify-center pb-4 bg-cover bg-center min-h-[calc(100vh-4rem-5rem)]"
 >
