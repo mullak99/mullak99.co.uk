@@ -16,7 +16,7 @@
 		class="bg-neutral-100 dark:bg-neutral-800 shadow-md border-t border-neutral-300 dark:border-neutral-700 h-20 -mt-[1px]"
 	>
 		<div
-			class="flex items-center justify-between max-w-7xl pb-1 mx-auto px-4 sm:px-6 lg:px-8 h-full"
+			class="flex items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full"
 		>
 			<div class="container mx-auto flex items-center justify-between h-full">
 				<div class="text-left flex items-center">
