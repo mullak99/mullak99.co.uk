@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
-Disallow: /projects/*
+Disallow: /cgi-bin/
+Disallow: /.error/
+Disallow: /.well-known/
+Disallow: /api/
+Disallow: /builds/
+Disallow: /_app/
 Sitemap: https://mullak99.co.uk/sitemap.xml
