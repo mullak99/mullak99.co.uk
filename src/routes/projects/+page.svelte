@@ -2,7 +2,7 @@
 	import ProjectTile from '$lib/ProjectTile.svelte';
 </script>
 
-<section class="relative flex pt-8 justify-center bg-cover bg-center min-h-screen">
+<section class="relative flex py-8 justify-center bg-cover bg-center min-h-[calc(100vh-4rem-5rem)]">
 	<div class="absolute inset-0"></div>
 	<div class="relative z-10 text-center w-full sm:w-7/12 px-4 sm:px-6 lg:px-8">
 		<h2

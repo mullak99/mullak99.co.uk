@@ -3,7 +3,9 @@
 	import { page } from '$app/state';
 </script>
 
-<section class="relative flex items-center justify-center min-h-screen bg-cover bg-center">
+<section
+	class="relative flex items-center justify-center min-h-[calc(100vh-4rem-5rem)] bg-cover bg-center"
+>
 	<div class="absolute inset-0"></div>
 	<div class="relative z-10 text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<h2
