@@ -2,8 +2,13 @@
 	import '../app.css';
 	import { faCode } from '@fortawesome/free-solid-svg-icons';
 	import { FontAwesomeIcon as Fa } from '@fortawesome/svelte-fontawesome';
+	import { page } from '$app/state';
 	import NavBar from '$lib/NavBar.svelte';
 </script>
+
+<svelte:head>
+	<link rel="canonical" href={page.url.href} />
+</svelte:head>
 
 <main class="bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100">
 	<!-- Navbar -->
@@ -11,28 +16,26 @@
 
 	<!-- Content -->
 	<slot />
-
 	<!-- Footer -->
 	<footer
-		class="bg-neutral-50 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 mt-auto shadow-md"
+		class="bg-neutral-100 dark:bg-neutral-800 shadow-md border-t border-neutral-300 dark:border-neutral-700 h-20 -mt-[1px]"
 	>
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-8">
-			<div class="flex justify-between items-center">
-				<p class="text-sm">&copy; {new Date().getFullYear()} mullak99. All rights reserved.</p>
-				<div class="flex space-x-6"></div>
+		<div class="flex items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+			<div class="container mx-auto flex items-center justify-between h-full">
+				<div class="text-left flex items-center">
+					<p>&copy; {new Date().getFullYear()} mullak99. All rights reserved.</p>
+				</div>
 				<!-- Source Code Link -->
-				<a
-					href="https://github.com/mullak99/mullak99.co.uk"
-					target="_blank"
-					rel="noopener noreferrer"
+				<button
+					class="px-2.5 py-2 bg-neutral-200 dark:bg-neutral-700 rounded-full shadow-md hover:bg-neutral-300 dark:hover:bg-neutral-600 flex items-center"
+					on:click={() => window.open('https://github.com/mullak99/mullak99.co.uk', '_blank')}
 					title="Source Code"
-					aria-label="Source Code"
 				>
 					<Fa
 						icon={faCode}
-						class="h-5 w-5 text-neutral-300 hover:text-white dark:hover:text-neutral-100"
+						class="h-6 w-5 pt-[2px] px-[1px] text-neutral-700 dark:text-neutral-300 -m-[1px]"
 					/>
-				</a>
+				</button>
 			</div>
 		</div>
 	</footer>

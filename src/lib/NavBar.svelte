@@ -1,41 +1,74 @@
 <script lang="ts">
-	import { faSun, faMoon, faBars } from '@fortawesome/free-solid-svg-icons';
+	import { faSun, faMoon, faCircleHalfStroke, faBars } from '@fortawesome/free-solid-svg-icons';
 	import { FontAwesomeIcon as Fa } from '@fortawesome/svelte-fontawesome';
 	import NavLinks from '$lib/NavLinks.svelte';
 
-	let isDarkMode = false;
-	let isMenuOpen = false;
-
-	// Check if dark mode is enabled
-	const isDarkModeEnabled = () => {
-		if (typeof document !== 'undefined') {
-			return document.documentElement.classList.contains('dark');
-		}
-		return false;
-	};
-
-	$: {
-		isDarkMode = isDarkModeEnabled();
+	enum Theme {
+		Auto = 'auto',
+		Light = 'light',
+		Dark = 'dark'
 	}
 
-	// Toggle dark mode
-	function toggleDarkMode() {
-		isDarkMode = !isDarkMode;
-		if (isDarkMode) {
+	// Check which theme is currently selected
+	const getSelectedTheme = () => {
+		if (typeof localStorage !== 'undefined') {
+			const storedTheme = localStorage.getItem('theme');
+			if (storedTheme) {
+				return storedTheme as Theme;
+			}
+		}
+		return Theme.Auto;
+	};
+
+	let selectedTheme: Theme = getSelectedTheme();
+	let isMenuOpen = false;
+
+	$: {
+		selectedTheme = getSelectedTheme();
+	}
+
+	// Switch themes
+	function switchTheme() {
+		if (typeof document === 'undefined') return;
+
+		if (selectedTheme === Theme.Auto) {
+			selectedTheme = Theme.Light;
+		} else if (selectedTheme === Theme.Light) {
+			selectedTheme = Theme.Dark;
+		} else {
+			selectedTheme = Theme.Auto;
+		}
+
+		localStorage.setItem('theme', selectedTheme);
+		applySelectedTheme();
+	}
+
+	// Apply the selected theme to the document
+	function applySelectedTheme() {
+		if (typeof document === 'undefined') return;
+
+		if (
+			selectedTheme === Theme.Dark ||
+			(selectedTheme === Theme.Auto && window.matchMedia('(prefers-color-scheme: dark)').matches)
+		) {
 			document.documentElement.classList.add('dark');
 		} else {
 			document.documentElement.classList.remove('dark');
 		}
 	}
+
+	applySelectedTheme();
 </script>
 
-<nav class="bg-neutral-100 dark:bg-neutral-800 shadow-md">
+<nav
+	class="bg-neutral-100 dark:bg-neutral-800 shadow-md border-b border-neutral-300 dark:border-neutral-700"
+>
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="flex items-center justify-between h-16">
 			<!-- Logo -->
 			<div class="flex-shrink-0">
-				<a href="/">
-					<img class="h-12 w-12" src="/logo.png" alt="mullak99" />
+				<a href="/" aria-label="Homepage">
+					<enhanced:img class="h-12 w-12" src="/static/logo.png" alt="mullak99" />
 				</a>
 			</div>
 			<!-- Hamburger Menu -->
@@ -63,12 +96,19 @@
 					<NavLinks />
 				</div>
 			</div>
-			<!-- Dark Mode Toggle -->
+			<!-- Theme Toggle -->
 			<button
 				class="hidden md:block px-2.5 py-2 bg-neutral-200 dark:bg-neutral-700 rounded-full shadow-md hover:bg-neutral-300 dark:hover:bg-neutral-600 flex items-center justify-center"
-				on:click={toggleDarkMode}
+				on:click={switchTheme}
+				title={`${selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)} Mode`}
+				aria-label={`${selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)} Mode`}
 			>
-				{#if isDarkMode}
+				{#if selectedTheme === Theme.Auto}
+					<Fa
+						icon={faCircleHalfStroke}
+						class="h-5 w-5 pt-[2px] px-[1px] text-neutral-700 dark:text-neutral-300 -m-[1px]"
+					/>
+				{:else if selectedTheme === Theme.Light}
 					<Fa
 						icon={faSun}
 						class="h-5 w-5 pt-[2px] px-[1px] text-neutral-700 dark:text-neutral-300 -m-[1px]"
@@ -93,9 +133,15 @@
 					role="button"
 					href="#"
 					tabindex="0"
-					on:click={toggleDarkMode}
+					on:click={switchTheme}
 				>
-					{#if isDarkMode}
+					{#if selectedTheme === Theme.Auto}
+						<Fa
+							icon={faCircleHalfStroke}
+							class="h-4 w-4 pr-1 text-neutral-700 dark:text-neutral-300"
+						/>
+						Auto Mode
+					{:else if selectedTheme === Theme.Light}
 						<Fa icon={faSun} class="h-4 w-4 pr-1 text-neutral-700 dark:text-neutral-300" />
 						Light Mode
 					{:else}

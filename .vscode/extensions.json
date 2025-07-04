@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "heybourn.headwind",
+    "esbenp.prettier-vscode",
+    "rvest.vs-code-prettier-eslint",
+    "svelte.svelte-vscode",
+    "ardenivanov.svelte-intellisense"
+  ]
+}
