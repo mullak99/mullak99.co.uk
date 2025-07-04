@@ -71,8 +71,40 @@
 					hotbar, and the original FV colormap.
 				</p>
 			</ProjectTile>
+			<ProjectTile
+				title="MCTools"
+				image="projects/MCTools.png"
+				imageShadow={false}
+				visitHref="https://mctools.mullak99.co.uk/"
+				sourceHref="https://github.com/mullak99/MCTools"
+			>
+				<p class="mt-4">
+					A web app for a few Minecraft-related tools, specifically for resource packs.
+				</p>
+				<p class="mt-4">Currently, it has the following features:</p>
+				<ul class="list-disc list-outside text-left ml-8 mt-2">
+					<li>Textures Tool: Comparing textures within resource pack against vanilla.</li>
+					<li>Potion Converter: Converting potions between Java and Bedrock formats.</li>
+					<li>Vanilla Assets: Download assets for specific versions.</li>
+					<li>Version Difference: Comparing two versions of Vanilla (Java) Minecraft's assets.</li>
+				</ul>
+			</ProjectTile>
+			<ProjectTile
+				title="Steam Account Switcher"
+				image="projects/SAS.png"
+				imageShadow={false}
+				downloadHref="https://github.com/mullak99/SteamAccountSwitcher/releases"
+				sourceHref="https://github.com/mullak99/SteamAccountSwitcher"
+			>
+				<p class="mt-4">
+					A simple tool to switch between Steam accounts. No password or Steam Guard code needed.
+				</p>
+				<p class="mt-4">
+					The UI is quite primitive and could do with a v2 redesign. However is still works.
+				</p>
+			</ProjectTile>
 		</div>
-		<p class="mt-6 text-sm text-neutral-500 dark:text-neutral-400 sm:text-md lg:text-lg">
+		<p class="mt-8 text-sm text-neutral-500 dark:text-neutral-400 sm:text-md lg:text-lg">
 			More projects will be listed in the future. In the mean time, additional projects can be found
 			on my <a class="underline" href="https://github.com/mullak99">GitHub</a>.
 		</p>
