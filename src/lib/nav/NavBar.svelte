@@ -1,13 +1,19 @@
 <script lang="ts">
 	import { faSun, faMoon, faCircleHalfStroke, faBars } from '@fortawesome/free-solid-svg-icons';
 	import { FontAwesomeIcon as Fa } from '@fortawesome/svelte-fontawesome';
-	import NavLinks from '$lib/NavLinks.svelte';
+	import NavLinks from '$lib/nav/NavLinks.svelte';
 
 	enum Theme {
 		Auto = 'auto',
 		Light = 'light',
 		Dark = 'dark'
 	}
+
+	const allThemes = [
+		{ theme: Theme.Auto, icon: faCircleHalfStroke, label: 'Auto' },
+		{ theme: Theme.Light, icon: faSun, label: 'Light' },
+		{ theme: Theme.Dark, icon: faMoon, label: 'Dark' }
+	];
 
 	// Check which theme is currently selected
 	const getSelectedTheme = () => {
@@ -21,7 +27,7 @@
 	};
 
 	let selectedTheme: Theme = getSelectedTheme();
-	let isMenuOpen = false;
+	let isMenuOpen: boolean = false;
 
 	$: {
 		selectedTheme = getSelectedTheme();
@@ -68,7 +74,12 @@
 			<!-- Logo -->
 			<div class="flex-shrink-0">
 				<a href="/" aria-label="Homepage">
-					<enhanced:img class="h-12 w-12" src="/static/logo.png" alt="mullak99" />
+					<enhanced:img
+						class="h-12 w-12 transition-transform duration-200 ease-in-out hover:scale-110"
+						src="/static/logo.png"
+						alt="mullak99"
+						title="mullak99"
+					/>
 				</a>
 			</div>
 			<!-- Hamburger Menu -->
@@ -100,25 +111,17 @@
 			<button
 				class="hidden md:block px-2.5 py-2 bg-neutral-200 dark:bg-neutral-700 rounded-full shadow-md hover:bg-neutral-300 dark:hover:bg-neutral-600 flex items-center justify-center"
 				on:click={switchTheme}
-				title={`${selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)} Mode`}
-				aria-label={`${selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)} Mode`}
+				title={`${selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)} Theme`}
+				aria-label={`${selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)} Theme`}
 			>
-				{#if selectedTheme === Theme.Auto}
-					<Fa
-						icon={faCircleHalfStroke}
-						class="h-5 w-5 pt-[2px] px-[1px] text-neutral-700 dark:text-neutral-300 -m-[1px]"
-					/>
-				{:else if selectedTheme === Theme.Light}
-					<Fa
-						icon={faSun}
-						class="h-5 w-5 pt-[2px] px-[1px] text-neutral-700 dark:text-neutral-300 -m-[1px]"
-					/>
-				{:else}
-					<Fa
-						icon={faMoon}
-						class="h-5 w-5 pt-[2px] px-[1px] text-neutral-700 dark:text-neutral-300 -m-[1px]"
-					/>
-				{/if}
+				{#each allThemes as option (option.theme)}
+					{#if selectedTheme === option.theme}
+						<Fa
+							icon={option.icon}
+							class="h-5 w-5 pt-[2px] px-[1px] text-neutral-700 dark:text-neutral-300 -m-[1px]"
+						/>
+					{/if}
+				{/each}
 			</button>
 		</div>
 	</div>
@@ -129,25 +132,18 @@
 				<NavLinks />
 				<!-- svelte-ignore a11y_invalid_attribute -->
 				<a
-					class="md:hidden block text-neutral-800 dark:text-neutral-200 hover:text-neutral-600 dark:hover:text-neutral-400"
+					class="md:hidden block text-neutral-800 dark:text-neutral-200 hover:text-neutral-600 dark:hover:text-neutral-400 transition-transform duration-200 ease-in-out hover:scale-95"
 					role="button"
 					href="#"
 					tabindex="0"
 					on:click={switchTheme}
 				>
-					{#if selectedTheme === Theme.Auto}
-						<Fa
-							icon={faCircleHalfStroke}
-							class="h-4 w-4 pr-1 text-neutral-700 dark:text-neutral-300"
-						/>
-						Auto Mode
-					{:else if selectedTheme === Theme.Light}
-						<Fa icon={faSun} class="h-4 w-4 pr-1 text-neutral-700 dark:text-neutral-300" />
-						Light Mode
-					{:else}
-						<Fa icon={faMoon} class="h-4 w-4 pr-1 text-neutral-700 dark:text-neutral-300" />
-						Dark Mode
-					{/if}
+					{#each allThemes as option (option.theme)}
+						{#if selectedTheme === option.theme}
+							<Fa icon={option.icon} class="h-4 w-4 pr-1 text-neutral-700 dark:text-neutral-300" />
+							{option.label} Theme
+						{/if}
+					{/each}
 				</a>
 			</div>
 		</div>

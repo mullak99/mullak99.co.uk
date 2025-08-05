@@ -1,5 +1,5 @@
 <script lang="ts">
-	import NavLink from '$lib/NavLink.svelte';
+	import NavLink from '$lib/nav/NavLink.svelte';
 	import {
 		faHouse,
 		faAddressCard,

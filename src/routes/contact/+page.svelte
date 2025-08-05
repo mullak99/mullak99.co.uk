@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { faGithub, faXTwitter, faYoutube, faSteam } from '@fortawesome/free-brands-svg-icons';
-	import { FontAwesomeIcon as Fa } from '@fortawesome/svelte-fontawesome';
+	import IconButton from '$lib/components/IconButton.svelte';
 </script>
 
 <svelte:head>
@@ -34,38 +34,10 @@
 				mullak99@mullak99.co.uk
 			</a>
 			<div class="mt-4 flex justify-center space-x-6">
-				<a
-					href="https://github.com/mullak99"
-					class="text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-100"
-					title="GitHub"
-					aria-label="GitHub"
-				>
-					<Fa icon={faGithub} class="h-6 w-6" />
-				</a>
-				<a
-					href="https://x.com/mullak99"
-					class="text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-100"
-					title="X"
-					aria-label="X"
-				>
-					<Fa icon={faXTwitter} class="h-6 w-6" />
-				</a>
-				<a
-					href="https://youtube.com/mullak99"
-					class="text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-100"
-					title="YouTube"
-					aria-label="YouTube"
-				>
-					<Fa icon={faYoutube} class="h-6 w-6" />
-				</a>
-				<a
-					href="http://steamcommunity.com/id/mullak99"
-					class="text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-100"
-					title="Steam"
-					aria-label="Steam"
-				>
-					<Fa icon={faSteam} class="h-6 w-6" />
-				</a>
+				<IconButton icon={faGithub} title="GitHub" href="https://github.com/mullak99" />
+				<IconButton icon={faXTwitter} title="X" href="https://x.com/mullak99" />
+				<IconButton icon={faYoutube} title="YouTube" href="https://youtube.com/mullak99" />
+				<IconButton icon={faSteam} title="Steam" href="http://steamcommunity.com/id/mullak99" />
 			</div>
 		</div>
 	</div>

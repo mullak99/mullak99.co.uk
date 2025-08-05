@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"license": "MIT",
 	"scripts": {
-		"dev": "tsc && vite dev",
+		"dev": "tsc && vite dev --host",
 		"build": "yarn update-browsers && vite build && yarn postbuild",
 		"postbuild": "npx svelte-sitemap --domain https://mullak99.co.uk",
 		"preview": "vite preview",
@@ -15,11 +15,11 @@
 		"format": "prettier --write ."
 	},
 	"dependencies": {
-		"@fortawesome/fontawesome-svg-core": "^6.7.2",
-		"@fortawesome/free-brands-svg-icons": "^6.7.2",
-		"@fortawesome/free-regular-svg-icons": "^6.7.2",
-		"@fortawesome/free-solid-svg-icons": "^6.7.2",
-		"@fortawesome/svelte-fontawesome": "^0.2.3"
+		"@fortawesome/fontawesome-svg-core": "^6.*",
+		"@fortawesome/free-brands-svg-icons": "^6.*",
+		"@fortawesome/free-regular-svg-icons": "^6.*",
+		"@fortawesome/free-solid-svg-icons": "^6.*",
+		"@fortawesome/svelte-fontawesome": "^0.2.*"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.*",
@@ -27,7 +27,7 @@
 		"@sveltejs/adapter-static": "^3.*",
 		"@sveltejs/enhanced-img": "^0.*",
 		"@sveltejs/kit": "^2.*",
-		"@sveltejs/vite-plugin-svelte": "^5.*",
+		"@sveltejs/vite-plugin-svelte": "^6.*",
 		"@types/eslint": "^9.*",
 		"autoprefixer": "^10.*",
 		"eslint": "^9.*",
@@ -44,10 +44,9 @@
 		"tailwindcss": "^3.*",
 		"typescript": "^5.*",
 		"typescript-eslint": "^8.*",
-		"vite": "^6.*"
+		"vite": "^7.*"
 	},
 	"resolutions": {
-		"cross-spawn": "^7.*",
 		"nanoid": "^5.*",
 		"cookie": "^1.*"
 	},

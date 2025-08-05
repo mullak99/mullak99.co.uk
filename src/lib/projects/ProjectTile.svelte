@@ -1,15 +1,15 @@
 <script lang="ts">
 	import { faCode, faDownload, faLink } from '@fortawesome/free-solid-svg-icons';
-	import { FontAwesomeIcon as Fa } from '@fortawesome/svelte-fontawesome';
+	import IconButton from '../components/IconButton.svelte';
 
-	export let image = '';
-	export let title = '';
-	export let href = '';
-	export let visitHref = '';
-	export let downloadHref = '';
-	export let sourceHref = '';
-	export let classNames = '';
-	export let imageShadow = true;
+	export let image: string = '';
+	export let title: string = '';
+	export let href: string = '';
+	export let visitHref: string = '';
+	export let downloadHref: string = '';
+	export let sourceHref: string = '';
+	export let classNames: string = '';
+	export let imageShadow: boolean = true;
 </script>
 
 <!-- Content Section -->
@@ -37,40 +37,13 @@
 		<div class="flex justify-start">
 			<div class="grid grid-rows-1 grid-flow-col gap-5 ml-2">
 				{#if visitHref}
-					<a
-						href={visitHref}
-						target="_blank"
-						rel="noopener noreferrer"
-						class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200"
-						title="Visit"
-						aria-label="Visit"
-					>
-						<Fa icon={faLink} class="h-6 w-6" />
-					</a>
+					<IconButton icon={faLink} title="Visit" href={visitHref} />
 				{/if}
 				{#if downloadHref}
-					<a
-						href={downloadHref}
-						target="_blank"
-						rel="noopener noreferrer"
-						class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200"
-						title="Download"
-						aria-label="Download"
-					>
-						<Fa icon={faDownload} class="h-6 w-6" />
-					</a>
+					<IconButton icon={faDownload} title="Download" href={downloadHref} />
 				{/if}
 				{#if sourceHref}
-					<a
-						href={sourceHref}
-						target="_blank"
-						rel="noopener noreferrer"
-						class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200"
-						title="Source"
-						aria-label="Source"
-					>
-						<Fa icon={faCode} class="h-6 w-6" />
-					</a>
+					<IconButton icon={faCode} title="Source" href={sourceHref} />
 				{/if}
 			</div>
 		</div>

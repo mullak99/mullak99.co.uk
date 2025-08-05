@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ProjectTile from '$lib/ProjectTile.svelte';
+	import ProjectTile from '$lib/projects/ProjectTile.svelte';
 </script>
 
 <svelte:head>
