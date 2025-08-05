@@ -3,7 +3,7 @@
 	import { faCode } from '@fortawesome/free-solid-svg-icons';
 	import { FontAwesomeIcon as Fa } from '@fortawesome/svelte-fontawesome';
 	import { page } from '$app/state';
-	import NavBar from '$lib/NavBar.svelte';
+	import NavBar from '$lib/nav/NavBar.svelte';
 </script>
 
 <svelte:head>
@@ -26,16 +26,18 @@
 					<p>&copy; {new Date().getFullYear()} mullak99. All rights reserved.</p>
 				</div>
 				<!-- Source Code Link -->
-				<button
+				<a
+					href="https://github.com/mullak99/mullak99.co.uk"
+					target="_blank"
+					rel="noopener noreferrer"
 					class="px-2.5 py-2 bg-neutral-200 dark:bg-neutral-700 rounded-full shadow-md hover:bg-neutral-300 dark:hover:bg-neutral-600 flex items-center"
-					on:click={() => window.open('https://github.com/mullak99/mullak99.co.uk', '_blank')}
 					title="Source Code"
 				>
 					<Fa
 						icon={faCode}
-						class="h-6 w-5 pt-[2px] px-[1px] text-neutral-700 dark:text-neutral-300 -m-[1px]"
+						class="h-6 w-5 p-[1px] text-neutral-700 dark:text-neutral-300 -m-[1px]"
 					/>
-				</button>
+				</a>
 			</div>
 		</div>
 	</footer>
