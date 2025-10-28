@@ -16,7 +16,7 @@
 <div
 	class="bg-white dark:bg-neutral-700 rounded-lg shadow-lg overflow-hidden min-h-[350px] flex flex-1 flex-col justify-between {classNames}"
 >
-	<div class="grid grid-cols-1 lg:grid-cols-4 justify-items-center p-6 flex-grow">
+	<div class="grid grid-cols-1 lg:grid-cols-4 justify-items-center p-6 grow">
 		<div class="w-full h-full flex items-start justify-start">
 			<img
 				class={`w-full h-auto object-cover rounded-lg ${imageShadow ? 'shadow-lg' : ''}`}
@@ -37,20 +37,20 @@
 		<div class="flex justify-start">
 			<div class="grid grid-rows-1 grid-flow-col gap-5 ml-2">
 				{#if visitHref}
-					<IconButton icon={faLink} title="Visit" href={visitHref} />
+					<IconButton icon={faLink} size="xl" title="Visit" href={visitHref} />
 				{/if}
 				{#if downloadHref}
-					<IconButton icon={faDownload} title="Download" href={downloadHref} />
+					<IconButton icon={faDownload} size="xl" title="Download" href={downloadHref} />
 				{/if}
 				{#if sourceHref}
-					<IconButton icon={faCode} title="Source" href={sourceHref} />
+					<IconButton icon={faCode} size="xl" title="Source" href={sourceHref} />
 				{/if}
 			</div>
 		</div>
 		<div class="flex justify-end">
 			{#if href}
 				<button
-					class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
+					class="px-4 py-2 bg-green-600 text-white rounded-sm hover:bg-green-700"
 					on:click={() => (window.location.href = href)}
 				>
 					Learn More

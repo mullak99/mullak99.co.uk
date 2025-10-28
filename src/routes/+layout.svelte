@@ -18,7 +18,7 @@
 	<slot />
 	<!-- Footer -->
 	<footer
-		class="bg-neutral-100 dark:bg-neutral-800 shadow-md border-t border-neutral-300 dark:border-neutral-700 h-20 -mt-[1px]"
+		class="bg-neutral-100 dark:bg-neutral-800 shadow-md border-t border-neutral-300 dark:border-neutral-700 h-20 -mt-px"
 	>
 		<div class="flex items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
 			<div class="container mx-auto flex items-center justify-between h-full">
@@ -30,12 +30,13 @@
 					href="https://github.com/mullak99/mullak99.co.uk"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="px-2.5 py-2 bg-neutral-200 dark:bg-neutral-700 rounded-full shadow-md hover:bg-neutral-300 dark:hover:bg-neutral-600 flex items-center"
+					class="px-2.5 py-3 bg-neutral-200 dark:bg-neutral-700 rounded-full shadow-md hover:bg-neutral-300 dark:hover:bg-neutral-600 flex items-center"
 					title="Source Code"
 				>
 					<Fa
 						icon={faCode}
-						class="h-6 w-5 p-[1px] text-neutral-700 dark:text-neutral-300 -m-[1px]"
+						size="lg"
+						class="mt-[1px] mb-0 text-neutral-700 dark:text-neutral-300"
 					/>
 				</a>
 			</div>

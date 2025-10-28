@@ -72,7 +72,7 @@
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="flex items-center justify-between h-16">
 			<!-- Logo -->
-			<div class="flex-shrink-0">
+			<div class="shrink-0">
 				<a href="/" aria-label="Homepage">
 					<enhanced:img
 						class="h-12 w-12 transition-transform duration-200 ease-in-out hover:scale-110"
@@ -85,18 +85,20 @@
 			<!-- Hamburger Menu -->
 			<div class="flex md:hidden">
 				<button
-					class="px-2.5 py-2 bg-neutral-200 dark:bg-neutral-700 rounded-full shadow-md hover:bg-neutral-300 dark:hover:bg-neutral-600"
+					class="px-2.5 py-2 bg-neutral-200 dark:bg-neutral-700 rounded-full shadow-md hover:bg-neutral-300 dark:hover:bg-neutral-600 cursor-pointer"
 					on:click={() => (isMenuOpen = !isMenuOpen)}
 				>
 					{#if isMenuOpen}
 						<Fa
 							icon={faBars}
-							class="h-5 w-5 pt-[2px] px-[1px] text-neutral-700 dark:text-neutral-300 -m-[1px]"
+							size="lg"
+							class="py-0.5 my-0.5 mt-[2px] mb-[1px]  text-neutral-700 dark:text-neutral-300"
 						/>
 					{:else}
 						<Fa
 							icon={faBars}
-							class="h-5 w-5 pt-[2px] px-[1px] text-neutral-700 dark:text-neutral-300 -m-[1px]"
+							size="lg"
+							class="py-0.5 my-0.5 mt-[2px] mb-[1px]  text-neutral-700 dark:text-neutral-300"
 						/>
 					{/if}
 				</button>
@@ -109,7 +111,7 @@
 			</div>
 			<!-- Theme Toggle -->
 			<button
-				class="hidden md:block px-2.5 py-2 bg-neutral-200 dark:bg-neutral-700 rounded-full shadow-md hover:bg-neutral-300 dark:hover:bg-neutral-600 flex items-center justify-center"
+				class="hidden md:block px-2.5 py-2 bg-neutral-200 dark:bg-neutral-700 rounded-full shadow-md hover:bg-neutral-300 dark:hover:bg-neutral-600 flex items-center justify-center cursor-pointer"
 				on:click={switchTheme}
 				title={`${selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)} Theme`}
 				aria-label={`${selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)} Theme`}
@@ -118,7 +120,8 @@
 					{#if selectedTheme === option.theme}
 						<Fa
 							icon={option.icon}
-							class="h-5 w-5 pt-[2px] px-[1px] text-neutral-700 dark:text-neutral-300 -m-[1px]"
+							size="lg"
+							class="py-0.5 my-0.5 mt-[2px] mb-[1px] text-neutral-700 dark:text-neutral-300"
 						/>
 					{/if}
 				{/each}

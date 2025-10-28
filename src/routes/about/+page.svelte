@@ -22,9 +22,9 @@
 			About
 		</h2>
 		<p class="mt-6 text-lg text-neutral-600 dark:text-neutral-300 sm:text-xl lg:text-2xl">
-			<Fa icon={faTriangleExclamation} class="text-yellow-400 dark:text-yellow-300 mr-2" />
+			<Fa icon={faTriangleExclamation} class="text-yellow-400 dark:text-yellow-300 mr-1" />
 			This page is a work in progress.
-			<Fa icon={faTriangleExclamation} class="text-yellow-400 dark:text-yellow-300 ml-2" />
+			<Fa icon={faTriangleExclamation} class="text-yellow-400 dark:text-yellow-300 ml-1" />
 		</p>
 	</div>
 </section>

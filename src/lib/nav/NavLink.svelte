@@ -18,7 +18,7 @@
 	{title}
 >
 	{#if icon}
-		<Fa {icon} class="h-4 w-4 pr-1" />
+		<Fa {icon} size="sm" class="pr-0.5" />
 	{/if}
 	{#if title}
 		{title}

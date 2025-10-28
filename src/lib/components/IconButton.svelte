@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { SizeProp } from '@fortawesome/fontawesome-svg-core';
 	import { type IconDefinition } from '@fortawesome/free-solid-svg-icons';
 	import { FontAwesomeIcon as Fa } from '@fortawesome/svelte-fontawesome';
 
@@ -6,6 +7,7 @@
 	export let title: string = '';
 	export let href: string = '';
 	export let classNames: string = '';
+	export let size: SizeProp = 'lg';
 </script>
 
 <a
@@ -17,6 +19,6 @@
 	aria-label={title}
 >
 	{#if icon}
-		<Fa {icon} class="h-6 w-6" />
+		<Fa {icon} {size} />
 	{/if}
 </a>
