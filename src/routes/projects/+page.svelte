@@ -100,7 +100,7 @@
 					A simple tool to switch between Steam accounts. No password or Steam Guard code needed.
 				</p>
 				<p class="mt-4">
-					The UI is quite primitive and could do with a v2 redesign. However is still works.
+					The UI is quite primitive and could do with a v2 redesign. However, it still works.
 				</p>
 			</ProjectTile>
 		</div>
