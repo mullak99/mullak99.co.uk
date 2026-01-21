@@ -25,7 +25,7 @@
 		<div class="mt-8 flex gap-8 grid grid-cols-1 4xl:grid-cols-2">
 			<ProjectTile
 				title="mullak99's Faithful"
-				image="projects/mullak99sFaithful.png"
+				image="/projects/mullak99sFaithful.png"
 				downloadHref="https://www.curseforge.com/minecraft/texture-packs/mullak99s-faithful-32x"
 				sourceHref="https://github.com/mullak99s-Faithful/mullak99sFaithful"
 			>
@@ -53,7 +53,7 @@
 			</ProjectTile>
 			<ProjectTile
 				title="FaithfulVenom"
-				image="projects/FaithfulVenom.png"
+				image="/projects/FaithfulVenom.png"
 				downloadHref="https://antvenom.com/files"
 				sourceHref="https://github.com/mullak99s-Faithful/FaithfulVenom"
 			>
@@ -73,7 +73,7 @@
 			</ProjectTile>
 			<ProjectTile
 				title="MCTools"
-				image="projects/MCTools.png"
+				image="/projects/MCTools.png"
 				imageShadow={false}
 				visitHref="https://mctools.mullak99.co.uk/"
 				sourceHref="https://github.com/mullak99/MCTools"
@@ -91,7 +91,7 @@
 			</ProjectTile>
 			<ProjectTile
 				title="Steam Account Switcher"
-				image="projects/SAS.png"
+				image="/projects/SAS.png"
 				imageShadow={false}
 				downloadHref="https://github.com/mullak99/SteamAccountSwitcher/releases"
 				sourceHref="https://github.com/mullak99/SteamAccountSwitcher"

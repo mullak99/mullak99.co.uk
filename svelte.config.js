@@ -8,8 +8,7 @@ export default {
 			assets: 'build', // Directory to output the static assets
 			fallback: null, // Fallback page for SPA routes (e.g., '200.html')
 			precompress: true, // Precompress the files for serving with compression
-			strict: true, // Strict mode for better error messages
-			trailingSlash: 'ignore' // Ignore trailing slashes in URLs
+			strict: true // Strict mode for better error messages
 		}),
 
 		prerender: {
