@@ -6,5 +6,8 @@ export default defineConfig({
 	plugins: [enhancedImages(), sveltekit()],
 	optimizeDeps: {
 		exclude: ['node_modules/.vite/deps']
+	},
+	ssr: {
+		noExternal: ['@fortawesome/svelte-fontawesome']
 	}
 });
