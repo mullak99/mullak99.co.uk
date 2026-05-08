@@ -22,7 +22,7 @@
 			A collection of projects I have worked on.
 		</p>
 
-		<div class="mt-8 flex gap-8 grid grid-cols-1 4xl:grid-cols-2">
+		<div class="mt-8 gap-8 grid grid-cols-1 4xl:grid-cols-2">
 			<ProjectTile
 				title="mullak99's Faithful"
 				image="/projects/mullak99sFaithful.png"
@@ -34,8 +34,8 @@
 						class="underline hover:opacity-80"
 						href="https://web.archive.org/web/20150607220656/http://www.minecraftforum.net:80/forums/mapping-and-modding/resource-packs/1223254-faithful-32x32-pack-update-red-cat-clay-1-8"
 						>Vattic's Faithful 32x resource pack</a
-					> dating back to 2012. It aims to remain close to its original style, with a few twists to
-					suit my preferences.
+					> dating back to 2012. It aims to remain close to its original style, with a few twists to suit
+					my preferences.
 				</p>
 				<p class="mt-4">
 					Textures to blocks/items/entities/etc. from MC1.8 and prior are (mostly) from Vattic's

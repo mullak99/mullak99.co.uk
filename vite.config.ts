@@ -4,9 +4,11 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
 	plugins: [enhancedImages(), sveltekit()],
+
 	optimizeDeps: {
-		exclude: ['node_modules/.vite/deps']
+		exclude: ['@fortawesome/svelte-fontawesome']
 	},
+
 	ssr: {
 		noExternal: ['@fortawesome/svelte-fontawesome']
 	}

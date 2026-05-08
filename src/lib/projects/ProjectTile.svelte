@@ -14,14 +14,17 @@
 
 <!-- Content Section -->
 <div
-	class="bg-white dark:bg-neutral-700 rounded-lg shadow-lg overflow-hidden min-h-[350px] flex flex-1 flex-col justify-between {classNames}"
+	class="bg-white dark:bg-neutral-700 rounded-lg shadow-lg overflow-hidden min-h-87.5 flex flex-1 flex-col justify-between {classNames}"
 >
 	<div class="grid grid-cols-1 lg:grid-cols-4 justify-items-center p-6 grow">
 		<div class="w-full h-full flex items-start justify-start">
-			<img
+			<enhanced:img
 				class={`w-full h-auto object-cover rounded-lg ${imageShadow ? 'shadow-lg' : ''}`}
 				src={image}
 				alt={title}
+				loading="lazy"
+				decoding="async"
+				sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
 			/>
 		</div>
 		<div class="px-6 col-span-3 mt-2">
@@ -51,7 +54,7 @@
 			{#if href}
 				<button
 					class="px-4 py-2 bg-green-600 text-white rounded-sm hover:bg-green-700"
-					on:click={() => (window.location.href = href)}
+					onclick={() => (window.location.href = href)}
 				>
 					Learn More
 				</button>

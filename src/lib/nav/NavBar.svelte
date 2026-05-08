@@ -29,10 +29,6 @@
 	let selectedTheme: Theme = getSelectedTheme();
 	let isMenuOpen: boolean = false;
 
-	$: {
-		selectedTheme = getSelectedTheme();
-	}
-
 	// Switch themes
 	function switchTheme() {
 		if (typeof document === 'undefined') return;
@@ -79,6 +75,8 @@
 						src="/static/logo.png"
 						alt="mullak99"
 						title="mullak99"
+						fetchpriority="high"
+						decoding="async"
 					/>
 				</a>
 			</div>
@@ -86,19 +84,19 @@
 			<div class="flex md:hidden">
 				<button
 					class="px-2.5 py-2 bg-neutral-200 dark:bg-neutral-700 rounded-full shadow-md hover:bg-neutral-300 dark:hover:bg-neutral-600 cursor-pointer"
-					on:click={() => (isMenuOpen = !isMenuOpen)}
+					onclick={() => (isMenuOpen = !isMenuOpen)}
 				>
 					{#if isMenuOpen}
 						<Fa
 							icon={faBars}
 							size="lg"
-							class="py-0.5 my-0.5 mt-[2px] mb-[1px]  text-neutral-700 dark:text-neutral-300"
+							class="py-0.5 my-0.5 mt-0.5 mb-px text-neutral-700 dark:text-neutral-300"
 						/>
 					{:else}
 						<Fa
 							icon={faBars}
 							size="lg"
-							class="py-0.5 my-0.5 mt-[2px] mb-[1px]  text-neutral-700 dark:text-neutral-300"
+							class="py-0.5 my-0.5 mt-0.5 mb-px text-neutral-700 dark:text-neutral-300"
 						/>
 					{/if}
 				</button>
@@ -111,8 +109,8 @@
 			</div>
 			<!-- Theme Toggle -->
 			<button
-				class="hidden md:block px-2.5 py-2 bg-neutral-200 dark:bg-neutral-700 rounded-full shadow-md hover:bg-neutral-300 dark:hover:bg-neutral-600 flex items-center justify-center cursor-pointer"
-				on:click={switchTheme}
+				class="hidden md:flex px-2.5 py-3 bg-neutral-200 dark:bg-neutral-700 rounded-full shadow-md hover:bg-neutral-300 dark:hover:bg-neutral-600 items-center justify-center cursor-pointer"
+				onclick={switchTheme}
 				title={`${selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)} Theme`}
 				aria-label={`${selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)} Theme`}
 			>
@@ -121,7 +119,7 @@
 						<Fa
 							icon={option.icon}
 							size="lg"
-							class="py-0.5 my-0.5 mt-[2px] mb-[1px] text-neutral-700 dark:text-neutral-300"
+							class="mt-px mb-0 text-neutral-700 dark:text-neutral-300"
 						/>
 					{/if}
 				{/each}
@@ -139,7 +137,7 @@
 					role="button"
 					href="#"
 					tabindex="0"
-					on:click={switchTheme}
+					onclick={switchTheme}
 				>
 					{#each allThemes as option (option.theme)}
 						{#if selectedTheme === option.theme}

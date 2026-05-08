@@ -1,0 +1,15 @@
+allowBuilds:
+  esbuild: true
+  sharp: true
+  svelte-preprocess: true
+
+blockExoticSubdeps: true
+packageManagerStrictVersion: true
+strictPeerDependencies: true
+savePrefix: ''
+resolutionMode: highest
+preferFrozenLockfile: true
+
+lockfile: true
+minimumReleaseAge: 4320
+#minimumReleaseAgeExclude:

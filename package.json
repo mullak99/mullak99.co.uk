@@ -4,7 +4,7 @@
 	"license": "MIT",
 	"scripts": {
 		"dev": "svelte-kit sync && vite dev --host",
-		"build": "yarn update-browsers && vite build && yarn postbuild",
+		"build": "pnpm update-browsers && vite build && pnpm postbuild",
 		"postbuild": "npx svelte-sitemap --domain https://mullak99.co.uk",
 		"preview": "vite preview",
 		"update-browsers": "npx update-browserslist-db@latest",
@@ -15,42 +15,42 @@
 		"format": "prettier --write ."
 	},
 	"dependencies": {
-		"@fortawesome/fontawesome-svg-core": "^7.*",
-		"@fortawesome/free-brands-svg-icons": "^7.*",
-		"@fortawesome/free-regular-svg-icons": "^7.*",
-		"@fortawesome/free-solid-svg-icons": "^7.*",
-		"@fortawesome/svelte-fontawesome": "^0.2.*"
+		"@fortawesome/fontawesome-svg-core": "7.2.0",
+		"@fortawesome/free-brands-svg-icons": "7.2.0",
+		"@fortawesome/free-regular-svg-icons": "7.2.0",
+		"@fortawesome/free-solid-svg-icons": "7.2.0",
+		"@fortawesome/svelte-fontawesome": "0.2.4"
 	},
 	"devDependencies": {
-		"@playwright/test": "^1.*",
-		"@sveltejs/adapter-auto": "^7.*",
-		"@sveltejs/adapter-static": "^3.*",
-		"@sveltejs/enhanced-img": "^0.*",
-		"@sveltejs/kit": "^2.*",
-		"@sveltejs/vite-plugin-svelte": "^7.*",
-		"@tailwindcss/postcss": "^4.*",
-		"@types/eslint": "^9.*",
-		"eslint": "^10.*",
-		"eslint-config-prettier": "^10.*",
-		"eslint-plugin-svelte": "^3.*",
-		"globals": "^17.*",
-		"postcss": "^8.*",
-		"prettier": "^3.*",
-		"prettier-plugin-svelte": "^3.*",
-		"svelte": "^5.*",
-		"svelte-check": "^4.*",
-		"svelte-preprocess": "^6.*",
-		"svelte-sitemap": "^3.*",
-		"tailwindcss": "^4.*",
-		"typescript": "^6.*",
-		"typescript-eslint": "^8.*",
-		"vite": "^7.*"
+		"@playwright/test": "1.59.1",
+		"@sveltejs/adapter-auto": "7.0.1",
+		"@sveltejs/adapter-static": "3.0.10",
+		"@sveltejs/enhanced-img": "0.10.4",
+		"@sveltejs/kit": "2.59.1",
+		"@sveltejs/vite-plugin-svelte": "6.2.4",
+		"@tailwindcss/postcss": "4.2.4",
+		"@types/eslint": "9.6.1",
+		"eslint": "10.3.0",
+		"eslint-config-prettier": "10.1.8",
+		"eslint-plugin-svelte": "3.17.1",
+		"globals": "17.6.0",
+		"postcss": "8.5.14",
+		"prettier": "3.8.3",
+		"prettier-plugin-svelte": "3.5.1",
+		"svelte": "5.55.5",
+		"svelte-check": "4.4.8",
+		"svelte-preprocess": "6.0.3",
+		"svelte-sitemap": "3.1.0",
+		"tailwindcss": "4.2.4",
+		"typescript": "5.9.3",
+		"typescript-eslint": "8.59.2",
+		"vite": "7.3.2"
 	},
 	"resolutions": {
-		"nanoid": "^5.*",
-		"cookie": "^1.*",
-		"js-yaml": "^4.*"
+		"nanoid": "5.1.11",
+		"cookie": "1.1.1",
+		"js-yaml": "4.1.1"
 	},
 	"type": "module",
-	"packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
+	"packageManager": "pnpm@10.33.4+sha512.1c67b3b359b2d408119ba1ed289f34b8fc3c6873412bec6fd264fbdc82489e510fcbecb9ce9d22dae7f3b76269d8441046014bdca53b9979cd7a561ad631b800"
 }

@@ -21,25 +21,19 @@
 		class="bg-neutral-100 dark:bg-neutral-800 shadow-md border-t border-neutral-300 dark:border-neutral-700 h-20 -mt-px"
 	>
 		<div class="flex items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
-			<div class="container mx-auto flex items-center justify-between h-full">
-				<div class="text-left flex items-center">
-					<p>&copy; {new Date().getFullYear()} mullak99. All rights reserved.</p>
-				</div>
-				<!-- Source Code Link -->
-				<a
-					href="https://github.com/mullak99/mullak99.co.uk"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="px-2.5 py-3 bg-neutral-200 dark:bg-neutral-700 rounded-full shadow-md hover:bg-neutral-300 dark:hover:bg-neutral-600 flex items-center"
-					title="Source Code"
-				>
-					<Fa
-						icon={faCode}
-						size="lg"
-						class="mt-[1px] mb-0 text-neutral-700 dark:text-neutral-300"
-					/>
-				</a>
+			<div class="text-left flex items-center">
+				<p>&copy; {new Date().getFullYear()} mullak99. All rights reserved.</p>
 			</div>
+			<!-- Source Code Link -->
+			<a
+				href="https://github.com/mullak99/mullak99.co.uk"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="px-2.5 py-3 bg-neutral-200 dark:bg-neutral-700 rounded-full shadow-md hover:bg-neutral-300 dark:hover:bg-neutral-600 flex items-center"
+				title="Source Code"
+			>
+				<Fa icon={faCode} size="lg" class="mt-px mb-0 text-neutral-700 dark:text-neutral-300" />
+			</a>
 		</div>
 	</footer>
 </main>

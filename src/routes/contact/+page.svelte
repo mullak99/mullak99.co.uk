@@ -17,7 +17,7 @@
 	<div class="absolute inset-0"></div>
 	<div class="relative z-10 text-center max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 		<h2
-			class="text-3xl font-extrabold text-neutral-900 dark:text-neutral-100 sm:text-4xl lg:text-5xl lg:text-5xl"
+			class="text-3xl font-extrabold text-neutral-900 dark:text-neutral-100 sm:text-4xl lg:text-5xl"
 		>
 			Get in Touch
 		</h2>

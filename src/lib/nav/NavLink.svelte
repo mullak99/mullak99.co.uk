@@ -2,11 +2,12 @@
 	import { page } from '$app/stores';
 	import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 	import { FontAwesomeIcon as Fa } from '@fortawesome/svelte-fontawesome';
-	$: currentPath = $page.url.pathname.replace(/\/$/, '');
 
 	export let path: string = '';
 	export let title: string | null = '';
 	export let icon: IconDefinition | null = null;
+
+	$: currentPath = $page.url.pathname.replace(/\/$/, '');
 </script>
 
 <a
@@ -18,7 +19,7 @@
 	{title}
 >
 	{#if icon}
-		<Fa {icon} size="sm" class="pr-0.5" />
+		<Fa {icon} size="sm" class="pr-0.5 w-4 h-4" />
 	{/if}
 	{#if title}
 		{title}
