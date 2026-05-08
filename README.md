@@ -12,14 +12,14 @@ Website for mullak99.co.uk. Made using [SvelteKit](https://kit.svelte.dev/) & [T
 
 1. Clone the repository somewhere.
 2. Open a terminal in the repository root and enter `nvm install`, `nvm use`, and `corepack enable`.
-3. Run `yarn install`.
+3. Run `pnpm install`.
 
 ## Running
 
 Once the development environment is set up, you can run the project with:
 
 ```bash
-yarn dev
+pnpm dev
 ```
 
 ## Building
@@ -27,10 +27,10 @@ yarn dev
 To create a production version of your app:
 
 ```bash
-yarn build
+pnpm build
 ```
 
-You can preview the production build with `yarn preview`.
+You can preview the production build with `pnpm preview`.
 
 ## Testing
 
