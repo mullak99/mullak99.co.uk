@@ -1,9 +1,12 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import { page } from '$app/stores';
 	import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 	import { FontAwesomeIcon as Fa } from '@fortawesome/svelte-fontawesome';
 
-	export let path: string = '';
+	type NavPath = '/' | '/about' | '/projects' | '/contact';
+
+	export let path: NavPath = '/';
 	export let title: string | null = '';
 	export let icon: IconDefinition | null = null;
 
@@ -11,7 +14,7 @@
 </script>
 
 <a
-	href={path}
+	href={resolve(path)}
 	class="hover:text-neutral-600 dark:hover:text-neutral-400 transition-transform duration-200 ease-in-out hover:scale-95 {currentPath ===
 	path.replace(/\/$/, '')
 		? 'text-green-600 dark:text-green-400'

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import { faSun, faMoon, faCircleHalfStroke, faBars } from '@fortawesome/free-solid-svg-icons';
 	import { FontAwesomeIcon as Fa } from '@fortawesome/svelte-fontawesome';
 	import NavLinks from '$lib/nav/NavLinks.svelte';
@@ -69,7 +70,7 @@
 		<div class="flex items-center justify-between h-16">
 			<!-- Logo -->
 			<div class="shrink-0">
-				<a href="/" aria-label="Homepage">
+				<a href={resolve('/')} aria-label="Homepage">
 					<enhanced:img
 						class="h-12 w-12 transition-transform duration-200 ease-in-out hover:scale-110"
 						src="/static/logo.png"

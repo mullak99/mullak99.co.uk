@@ -13,7 +13,7 @@
 <a
 	{href}
 	target="_blank"
-	rel="noopener noreferrer"
+	rel="external noopener noreferrer"
 	class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200 transition-transform duration-200 ease-in-out hover:scale-90 {classNames}"
 	{title}
 	aria-label={title}
