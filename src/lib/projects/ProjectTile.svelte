@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import type { Pathname } from '$app/types';
+	import type { Path } from '$app/types';
 	import { faCode, faDownload, faLink } from '@fortawesome/free-solid-svg-icons';
 	import type { Picture } from '@sveltejs/enhanced-img';
 	import IconButton from '../components/IconButton.svelte';
@@ -35,8 +35,9 @@
 		<div class="px-6 col-span-3 mt-2">
 			<h3 class="text-2xl font-bold text-neutral-900 dark:text-neutral-100">
 				{#if href}
-					<a class="tile-link after:absolute after:inset-0" href={resolve(href as Pathname)}
-						>{title}</a
+					<a
+						class="tile-link after:absolute after:inset-0"
+						href={resolve(href.replace(/^\//, '') as Path)}>{title}</a
 					>
 				{:else}
 					{title}

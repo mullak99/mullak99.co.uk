@@ -3,7 +3,7 @@
 	import { resolve } from '$app/paths';
 	import { faSun, faMoon, faCircleHalfStroke, faBars } from '@fortawesome/free-solid-svg-icons';
 	import { FontAwesomeIcon as Fa } from '@fortawesome/svelte-fontawesome';
-	import NavLinks from '$lib/nav/NavLinks.svelte';
+	import NavLinks from '#lib/nav/NavLinks.svelte';
 
 	enum Theme {
 		Auto = 'auto',

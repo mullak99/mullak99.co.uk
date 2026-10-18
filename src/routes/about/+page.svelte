@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
 	import { FontAwesomeIcon as Fa } from '@fortawesome/svelte-fontawesome';
-	import Head from '$lib/Head.svelte';
+	import Head from '#lib/Head.svelte';
 </script>
 
 <Head

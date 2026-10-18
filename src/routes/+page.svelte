@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Head from '$lib/Head.svelte';
+	import Head from '#lib/Head.svelte';
 
 	const description =
 		'C#, JavaScript and TypeScript developer who also does some stuff with Minecraft resourcepacks.';

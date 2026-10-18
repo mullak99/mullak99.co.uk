@@ -1,10 +1,10 @@
 <script lang="ts">
-	import ProjectTile from '$lib/projects/ProjectTile.svelte';
-	import Head from '$lib/Head.svelte';
-	import faithful from '../../../static/projects/mullak99sFaithful.png?w=128;256;512&enhanced';
-	import faithfulVenom from '../../../static/projects/FaithfulVenom.png?w=64;128&enhanced';
-	import mcTools from '../../../static/projects/MCTools.png?w=128;256;512&enhanced';
-	import steamAccountSwitcher from '../../../static/projects/SAS.png?w=128;256;500&enhanced';
+	import ProjectTile from '#lib/projects/ProjectTile.svelte';
+	import Head from '#lib/Head.svelte';
+	import faithful from '#lib/assets/projects/mullak99sFaithful.png?w=128;256;512&enhanced';
+	import faithfulVenom from '#lib/assets/projects/FaithfulVenom.png?w=64;128&enhanced';
+	import mcTools from '#lib/assets/projects/MCTools.png?w=128;256;512&enhanced';
+	import steamAccountSwitcher from '#lib/assets/projects/SAS.png?w=128;256;500&enhanced';
 
 	const description = 'A collection of projects I have worked on.';
 </script>

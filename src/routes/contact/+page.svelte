@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { faGithub, faXTwitter, faYoutube, faSteam } from '@fortawesome/free-brands-svg-icons';
-	import IconButton from '$lib/components/IconButton.svelte';
-	import Head from '$lib/Head.svelte';
+	import IconButton from '#lib/components/IconButton.svelte';
+	import Head from '#lib/Head.svelte';
 
 	const description = 'Get in touch with mullak99 via email or social media.';
 </script>

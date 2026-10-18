@@ -3,7 +3,7 @@
 	import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 	import { FontAwesomeIcon as Fa } from '@fortawesome/svelte-fontawesome';
 	import type { Picture } from '@sveltejs/enhanced-img';
-	import Head from '$lib/Head.svelte';
+	import Head from '#lib/Head.svelte';
 
 	export let title: string;
 	export let description: string;

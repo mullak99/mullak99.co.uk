@@ -1,16 +1,18 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 	import { FontAwesomeIcon as Fa } from '@fortawesome/svelte-fontawesome';
 
 	type NavPath = '/' | '/about' | '/projects' | '/contact';
 
-	export let path: NavPath = '/';
-	export let title: string | null = '';
-	export let icon: IconDefinition | null = null;
+	let {
+		path = '/',
+		title = '',
+		icon = null
+	}: { path?: NavPath; title?: string | null; icon?: IconDefinition | null } = $props();
 
-	$: currentPath = $page.url.pathname.replace(/\/$/, '');
+	const currentPath = $derived(page.url.pathname.replace(/\/$/, ''));
 </script>
 
 <a

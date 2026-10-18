@@ -1,6 +1,6 @@
 <script lang="ts">
-	import ProjectPage from '$lib/projects/ProjectPage.svelte';
-	import faithful from '../../../../static/projects/mullak99sFaithful.png?w=320;640&enhanced';
+	import ProjectPage from '#lib/projects/ProjectPage.svelte';
+	import faithful from '#lib/assets/projects/mullak99sFaithful.png?w=320;640&enhanced';
 </script>
 
 <ProjectPage

@@ -5,8 +5,8 @@
 	import { faCode } from '@fortawesome/free-solid-svg-icons';
 	import { FontAwesomeIcon as Fa } from '@fortawesome/svelte-fontawesome';
 	import { page } from '$app/state';
-	import { SITE_URL } from '$lib/site.js';
-	import NavBar from '$lib/nav/NavBar.svelte';
+	import { SITE_URL } from '#lib/site.js';
+	import NavBar from '#lib/nav/NavBar.svelte';
 
 	config.autoAddCss = false;
 </script>
