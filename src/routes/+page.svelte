@@ -1,26 +1,24 @@
 <script lang="ts">
+	import Head from '$lib/Head.svelte';
+
+	const description =
+		'C#, JavaScript and TypeScript developer who also does some stuff with Minecraft resourcepacks.';
 </script>
 
-<svelte:head>
-	<title>mullak99.co.uk | Home</title>
-	<meta name="description" content="Introduction" />
-	<meta property="og:title" content="mullak99.co.uk | Home" />
-	<meta property="og:description" content="Introduction" />
-	<meta property="og:image" content="https://mullak99.co.uk/logo.png" />
-</svelte:head>
+<Head title="Home" {description} ogTitle="mullak99.co.uk" />
 
 <section
 	class="relative flex items-center justify-center pb-4 bg-cover bg-center min-h-[calc(100vh-4rem-5rem)]"
 >
 	<div class="absolute inset-0"></div>
 	<div class="relative z-10 text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-		<h2
+		<h1
 			class="text-3xl font-extrabold text-neutral-900 dark:text-neutral-100 sm:text-4xl lg:text-5xl"
 		>
 			Introduction
-		</h2>
+		</h1>
 		<p class="mt-4 text-lg text-neutral-600 dark:text-neutral-300">
-			C#, JavaScript and TypeScript developer who also does some stuff with Minecraft resourcepacks.
+			{description}
 		</p>
 		<p class="mt-4 text-lg text-neutral-600 dark:text-neutral-300">
 			This site is a work in progress. More information will be added in the future.

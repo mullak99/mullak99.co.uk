@@ -7,5 +7,5 @@ export const doesPageLoad = async (page: Page, path: string) => {
 		}
 	});
 	await page.goto(path);
-	await expect(page.locator('h2')).toBeVisible();
+	await expect(page.locator('h1')).toBeVisible();
 };

@@ -1,13 +1,22 @@
 <script lang="ts">
 	import '../app.css';
+	import '@fortawesome/fontawesome-svg-core/styles.css';
+	import { config } from '@fortawesome/fontawesome-svg-core';
 	import { faCode } from '@fortawesome/free-solid-svg-icons';
 	import { FontAwesomeIcon as Fa } from '@fortawesome/svelte-fontawesome';
 	import { page } from '$app/state';
+	import { SITE_URL } from '$lib/site.js';
 	import NavBar from '$lib/nav/NavBar.svelte';
+
+	config.autoAddCss = false;
 </script>
 
 <svelte:head>
-	<link rel="canonical" href={page.url.href} />
+	<link rel="canonical" href={`${SITE_URL}${page.url.pathname}`} />
+	<link rel="preconnect" href="https://x.com" crossorigin="anonymous" />
+	<link rel="preconnect" href="https://youtube.com" crossorigin="anonymous" />
+	<link rel="preconnect" href="https://www.curseforge.com" crossorigin="anonymous" />
+	<link rel="preconnect" href="https://antvenom.com" crossorigin="anonymous" />
 </svelte:head>
 
 <main class="bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100">

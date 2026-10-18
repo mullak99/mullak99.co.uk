@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { resolve } from '$app/paths';
 	import { faSun, faMoon, faCircleHalfStroke, faBars } from '@fortawesome/free-solid-svg-icons';
 	import { FontAwesomeIcon as Fa } from '@fortawesome/svelte-fontawesome';
@@ -27,7 +28,7 @@
 		return Theme.Auto;
 	};
 
-	let selectedTheme: Theme = getSelectedTheme();
+	let selectedTheme: Theme = Theme.Auto;
 	let isMenuOpen: boolean = false;
 
 	// Switch themes
@@ -60,7 +61,17 @@
 		}
 	}
 
-	applySelectedTheme();
+	onMount(() => {
+		selectedTheme = getSelectedTheme();
+		applySelectedTheme();
+
+		const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)');
+		const handleThemeChange = () => {
+			if (selectedTheme === Theme.Auto) applySelectedTheme();
+		};
+		preferredTheme.addEventListener('change', handleThemeChange);
+		return () => preferredTheme.removeEventListener('change', handleThemeChange);
+	});
 </script>
 
 <nav
@@ -73,7 +84,8 @@
 				<a href={resolve('/')} aria-label="Homepage">
 					<enhanced:img
 						class="h-12 w-12 transition-transform duration-200 ease-in-out hover:scale-110"
-						src="/static/logo.png"
+						src="/static/logo.png?w=48;96;144"
+						sizes="48px"
 						alt="mullak99"
 						title="mullak99"
 						fetchpriority="high"
@@ -85,6 +97,10 @@
 			<div class="flex md:hidden">
 				<button
 					class="px-2.5 py-2 bg-neutral-200 dark:bg-neutral-700 rounded-full shadow-md hover:bg-neutral-300 dark:hover:bg-neutral-600 cursor-pointer"
+					type="button"
+					aria-label="Toggle navigation"
+					aria-expanded={isMenuOpen}
+					aria-controls="mobile-navigation"
 					onclick={() => (isMenuOpen = !isMenuOpen)}
 				>
 					{#if isMenuOpen}
@@ -128,16 +144,13 @@
 		</div>
 	</div>
 	<!-- Mobile Menu -->
-	{#if isMenuOpen}
-		<div class="md:hidden lg:hidden">
+	<div id="mobile-navigation" class="md:hidden" hidden={!isMenuOpen}>
+		{#if isMenuOpen}
 			<div class="flex flex-col items-end px-2 pt-2 pb-3 space-y-4 sm:px-3">
 				<NavLinks />
-				<!-- svelte-ignore a11y_invalid_attribute -->
-				<a
+				<button
 					class="md:hidden block text-neutral-800 dark:text-neutral-200 hover:text-neutral-600 dark:hover:text-neutral-400 transition-transform duration-200 ease-in-out hover:scale-95"
-					role="button"
-					href="#"
-					tabindex="0"
+					type="button"
 					onclick={switchTheme}
 				>
 					{#each allThemes as option (option.theme)}
@@ -146,8 +159,8 @@
 							{option.label} Theme
 						{/if}
 					{/each}
-				</a>
+				</button>
 			</div>
-		</div>
-	{/if}
+		{/if}
+	</div>
 </nav>

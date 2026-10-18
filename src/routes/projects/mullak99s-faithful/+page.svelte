@@ -1,29 +1,27 @@
 <script lang="ts">
-	import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
-	import { FontAwesomeIcon as Fa } from '@fortawesome/svelte-fontawesome';
+	import ProjectPage from '$lib/projects/ProjectPage.svelte';
+	import faithful from '../../../../static/projects/mullak99sFaithful.png?w=320;640&enhanced';
 </script>
 
-<svelte:head>
-	<title>mullak99.co.uk | mullak99's Faithful</title>
-	<meta name="description" content="mullak99's Faithful" />
-	<meta property="og:title" content="mullak99.co.uk | mullak99's Faithful" />
-	<meta property="og:description" content="mullak99's Faithful" />
-	<meta property="og:image" content="https://mullak99.co.uk/logo.png" />
-</svelte:head>
-
-<section
-	class="relative flex items-center justify-center pb-4 bg-cover bg-center min-h-[calc(100vh-4rem-5rem)]"
+<ProjectPage
+	title="mullak99's Faithful"
+	description="mullak99's Faithful is a variation of Vattic's Faithful 32x resource pack dating back to 2012. It aims to remain close to its original style, with a few twists to suit my preferences."
+	image={faithful}
 >
-	<div class="absolute inset-0"></div>
-	<div class="relative z-10 text-center max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-		<h2
-			class="text-3xl font-extrabold text-neutral-900 dark:text-neutral-100 sm:text-4xl lg:text-5xl"
+	<p>
+		Textures for blocks, items, and entities from MC1.8 and prior are mostly from
+		<a
+			class="underline hover:opacity-80"
+			href="https://web.archive.org/web/20150607220656/http://www.minecraftforum.net:80/forums/mapping-and-modding/resource-packs/1223254-faithful-32x32-pack-update-red-cat-clay-1-8"
+			>Vattic's Faithful 32x</a
+		>, whereas MC1.9+ textures mostly use those from
+		<a class="underline hover:opacity-80" href="https://github.com/ClassicFaithful"
+			>Classic Faithful 32x</a
 		>
-			mullak99's Faithful
-		</h2>
-		<p class="mt-6 text-lg text-neutral-600 dark:text-neutral-300 sm:text-xl lg:text-2xl">
-			This page is a work in progress.
-		</p>
-		<Fa icon={faTriangleExclamation} class="mt-8 h-12 w-12 text-yellow-400 dark:text-yellow-300" />
-	</div>
-</section>
+		or <a class="underline hover:opacity-80" href="https://faithfulpack.net/">Faithful 32x</a>.
+	</p>
+	<p>
+		The pack aims to loosely follow the pre-1.14 / Programmer Art texture style, as well as Vattic's
+		original Faithful style.
+	</p>
+</ProjectPage>

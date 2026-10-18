@@ -1,31 +1,32 @@
 <script lang="ts">
 	import ProjectTile from '$lib/projects/ProjectTile.svelte';
+	import Head from '$lib/Head.svelte';
+	import faithful from '../../../static/projects/mullak99sFaithful.png?w=128;256;512&enhanced';
+	import faithfulVenom from '../../../static/projects/FaithfulVenom.png?w=64;128&enhanced';
+	import mcTools from '../../../static/projects/MCTools.png?w=128;256;512&enhanced';
+	import steamAccountSwitcher from '../../../static/projects/SAS.png?w=128;256;500&enhanced';
+
+	const description = 'A collection of projects I have worked on.';
 </script>
 
-<svelte:head>
-	<title>mullak99.co.uk | Projects</title>
-	<meta name="description" content="Projects" />
-	<meta property="og:title" content="mullak99.co.uk | Projects" />
-	<meta property="og:description" content="Projects" />
-	<meta property="og:image" content="https://mullak99.co.uk/logo.png" />
-</svelte:head>
+<Head title="Projects" {description} />
 
 <section class="relative flex py-8 justify-center bg-cover bg-center min-h-[calc(100vh-4rem-5rem)]">
 	<div class="absolute inset-0"></div>
 	<div class="relative z-10 text-center w-full sm:w-7/12 px-4 sm:px-6 lg:px-8">
-		<h2
+		<h1
 			class="text-3xl font-extrabold text-neutral-900 dark:text-neutral-100 sm:text-4xl lg:text-5xl"
 		>
 			Projects
-		</h2>
+		</h1>
 		<p class="mt-6 text-lg text-neutral-600 dark:text-neutral-300 sm:text-xl lg:text-2xl">
-			A collection of projects I have worked on.
+			{description}
 		</p>
 
 		<div class="mt-8 gap-8 grid grid-cols-1 4xl:grid-cols-2">
 			<ProjectTile
 				title="mullak99's Faithful"
-				image="/projects/mullak99sFaithful.png"
+				image={faithful}
 				downloadHref="https://www.curseforge.com/minecraft/texture-packs/mullak99s-faithful-32x"
 				sourceHref="https://github.com/mullak99s-Faithful/mullak99sFaithful"
 			>
@@ -53,7 +54,7 @@
 			</ProjectTile>
 			<ProjectTile
 				title="FaithfulVenom"
-				image="/projects/FaithfulVenom.png"
+				image={faithfulVenom}
 				downloadHref="https://antvenom.com/files"
 				sourceHref="https://github.com/mullak99s-Faithful/FaithfulVenom"
 			>
@@ -73,7 +74,7 @@
 			</ProjectTile>
 			<ProjectTile
 				title="MCTools"
-				image="/projects/MCTools.png"
+				image={mcTools}
 				imageShadow={false}
 				visitHref="https://mctools.mullak99.co.uk/"
 				sourceHref="https://github.com/mullak99/MCTools"
@@ -91,7 +92,7 @@
 			</ProjectTile>
 			<ProjectTile
 				title="Steam Account Switcher"
-				image="/projects/SAS.png"
+				image={steamAccountSwitcher}
 				imageShadow={false}
 				downloadHref="https://github.com/mullak99/SteamAccountSwitcher/releases"
 				sourceHref="https://github.com/mullak99/SteamAccountSwitcher"
